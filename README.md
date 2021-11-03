@@ -10,7 +10,7 @@ I sent my yml files in github/workflows folder to actions and built it.
 
 
 
-**BackEnd
+**BackEnd**
 
   /todo: add a new TODO list / POST
   
@@ -27,7 +27,7 @@ I sent my yml files in github/workflows folder to actions and built it.
   
   
   
-**Frontend
+**Frontend**
 
   /todo: print list through index.html
   
