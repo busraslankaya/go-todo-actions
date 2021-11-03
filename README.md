@@ -1,4 +1,4 @@
-# 📝 TO-DO LIST APP
+# 📝 WEB BASED TO-DO LIST APPLICATION
 
 This is a to-do list application developed with Golang.
 
@@ -9,6 +9,7 @@ I also created docker image with Dockerfile file.
 I sent my yml files in github/workflows folder to actions and built it.
 
 
+![image](https://user-images.githubusercontent.com/60943616/140058038-ceda5aad-da04-4664-9a01-15242ef27544.png)
 
 **BackEnd**
 
@@ -20,7 +21,11 @@ I sent my yml files in github/workflows folder to actions and built it.
   
   /todo/{id:[0-9]+}: Display the TODO list corresponding to id / GET
   
+  /todo{id:[0-9]+}: delete TODO list / DELETE
+  
   /todo: update TODO list / PUT
+  
+  /todo/{id:[0-9]+}: Created to update the status of TODO items through Bool type / PUT
   
   /todo/{id:[0-9]+}: Created so that TODOLIST Content can be edited / PUT
   
