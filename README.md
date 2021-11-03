@@ -25,6 +25,8 @@ And here is my interface.
 I sent my yml files in github/workflows folder to actions and built it.
 
 
+![image](https://user-images.githubusercontent.com/60943616/140064011-c27346e8-b699-49ce-8039-6e335e0c780c.png)
+![image](https://user-images.githubusercontent.com/60943616/140064135-06fc34b3-df9f-4936-b6d5-d29ddcf22fce.png)
 
 
 **BackEnd**
