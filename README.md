@@ -2,31 +2,42 @@
 
 This is a to-do list application developed with Golang.
 
-Local connection is provided with the :8000 port specified in the main.go file. 
+Local connection is provided with the :8000 port specified in the main.go file. This is the initial state of my project.
+
+![image](https://user-images.githubusercontent.com/60943616/140062546-d3ccb54e-ee31-4e96-9333-86d216d882d0.png)
+
+
 A test function is executing for the TestIndexGet and TestPostTodo functions in the file named app_test.go. But I did not get successful results in this test file.
 
 ![image](https://user-images.githubusercontent.com/60943616/140061750-cdfa6c7b-b7e7-40b7-8558-868a34e9b8e8.png)
 
 
 I also created docker image with Dockerfile file.
-When i run build command
+First of all, I built my project to create a docker image. I have a docker image named todo_go. I then ran this docker image and connected to localhost:8000 and thus got my interface. The commands I run for these processes are as follows.
+
 ![image](https://user-images.githubusercontent.com/60943616/140062754-d55d3d29-0d31-4fec-87b9-43d6d382092e.png)
+
 I created my docker image
+
 ![image](https://user-images.githubusercontent.com/60943616/140062829-251bfabc-9b39-4f45-890b-234d541a1b99.png)
-Iran 
+
+I ran 
+
 ![image](https://user-images.githubusercontent.com/60943616/140062893-c42aaaaf-2d66-4dde-affa-a84ef26dfa9f.png)
 
 And here is my interface.
 
-![image](https://user-images.githubusercontent.com/60943616/140058038-ceda5aad-da04-4664-9a01-15242ef27544.png)
-
-![image](https://user-images.githubusercontent.com/60943616/140062546-d3ccb54e-ee31-4e96-9333-86d216d882d0.png)
+![image](https://user-images.githubusercontent.com/60943616/140066219-9a847c59-2b38-4be3-82e2-b58d32513b56.png)
 
 
-I sent my yml files in github/workflows folder to actions and built it.
 
+
+I preferred to use github actions from CI/CD pipeline tools. First of all, I pushed my project and I sent my yml files in github/workflows folder to actions and built it. The command i ran like this.
 
 ![image](https://user-images.githubusercontent.com/60943616/140064011-c27346e8-b699-49ce-8039-6e335e0c780c.png)
+
+And the workflows I pushed are like this: 
+
 ![image](https://user-images.githubusercontent.com/60943616/140064135-06fc34b3-df9f-4936-b6d5-d29ddcf22fce.png)
 
 
@@ -78,3 +89,9 @@ I sent my yml files in github/workflows folder to actions and built it.
     "id":1,"Content":"buy some milk","Completed":false,"created_at":"2021-11-02T22:15:23.9938856Z"
     
     }
+
+
+![image](https://user-images.githubusercontent.com/60943616/140066272-4ca29f99-6ef0-4d79-8e1b-14c1ed6f5a1d.png)
+
+![image](https://user-images.githubusercontent.com/60943616/140066318-6eeaa5f6-6309-4145-a78a-37e4322073b4.png)
+
