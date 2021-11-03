@@ -2,14 +2,30 @@
 
 This is a to-do list application developed with Golang.
 
-Local connection is provided with the :8000 port specified in the main.go file. There are five functions named indexHandler, TodosHandler, GetTodoListHandler, AddTodoListHandler, NewHandler in the app.go file. 
-A test function is executing for the AddTodoListHandler function in the file named app_test.go.
+Local connection is provided with the :8000 port specified in the main.go file. 
+A test function is executing for the TestIndexGet and TestPostTodo functions in the file named app_test.go. But I did not get successful results in this test file.
+![image](https://user-images.githubusercontent.com/60943616/140061750-cdfa6c7b-b7e7-40b7-8558-868a34e9b8e8.png)
+
 
 I also created docker image with Dockerfile file.
+When i run build command
+![image](https://user-images.githubusercontent.com/60943616/140062754-d55d3d29-0d31-4fec-87b9-43d6d382092e.png)
+I created my docker image
+![image](https://user-images.githubusercontent.com/60943616/140062829-251bfabc-9b39-4f45-890b-234d541a1b99.png)
+Iran 
+![image](https://user-images.githubusercontent.com/60943616/140062893-c42aaaaf-2d66-4dde-affa-a84ef26dfa9f.png)
+
+And here is my interface.
+
+![image](https://user-images.githubusercontent.com/60943616/140058038-ceda5aad-da04-4664-9a01-15242ef27544.png)
+
+![image](https://user-images.githubusercontent.com/60943616/140062546-d3ccb54e-ee31-4e96-9333-86d216d882d0.png)
+
+
 I sent my yml files in github/workflows folder to actions and built it.
 
 
-![image](https://user-images.githubusercontent.com/60943616/140058038-ceda5aad-da04-4664-9a01-15242ef27544.png)
+
 
 **BackEnd**
 
