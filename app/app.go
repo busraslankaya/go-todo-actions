@@ -13,9 +13,18 @@ import (
 
 type ToDo struct {
 	ID        int       `json:"id"`
-	Content   string    `json:"content'`
+	Content   string    `json:"content`
 	Completed bool      `json:completed`
 	CreatedAt time.Time `json:"created_at"`
+}
+type SliceResponse struct {
+	Status string
+	Data   []*ToDo
+}
+
+type Response struct {
+	Status string
+	Data   string
 }
 
 var (
@@ -89,19 +98,17 @@ func AddTodoListHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, string(data))
 	fmt.Println(string(data))
 }
-
 func RemoveTodoListHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
 	if _, ok := todoMap[id]; ok {
 		delete(todoMap, id)
 		w.WriteHeader(http.StatusOK)
-		fmt.Fprint(w, "DLETET TODO LIST ID:", id)
+		fmt.Fprint(w, "DELETE TODO LIST ID:", id)
 	} else {
 		w.WriteHeader(http.StatusBadRequest)
 	}
 }
-
 
 func UpdateStateTodoListHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
@@ -147,7 +154,6 @@ func NewHandler() http.Handler {
 	mux.HandleFunc("/todo/{id:[0-9]+}", GetTodoListHandler).Methods("GET")
 	mux.HandleFunc("/todo/{id:[0-9]+}", RemoveTodoListHandler).Methods("DELETE")
 
-	// Public => JS, CSS PathPrefix
 	mux.PathPrefix("/public/").Handler(http.StripPrefix("/public/", fs))
 	return mux
 }

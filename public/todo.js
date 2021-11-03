@@ -19,7 +19,7 @@ function AddTodoListSend() {
         contentType: 'application/json',
         data: JSON.stringify(data),
         success: function(data) {
-            console.log("전송 완료!");
+            console.log("Transmission complete!");
             location.reload();
         },
         error: function(xhr, status, err) {
@@ -38,13 +38,13 @@ function GetTodoList() {
         contentType: 'application/json',
         success: function(todo) {
             const Obj = JSON.parse(JSON.stringify(todo))
-            // 코드 정렬화 / id를 기준으로 함.
+        
             Obj.sort(function(a, b) {
                 if (a.id < b.id) return -1;
                 if (a.id > b.id) return 1;
                 return 0;
             });
-            // 출력
+          
             Obj.forEach((item) => {
                 let li = document.createElement('li');
                 li.innerHTML = `<p class="item-content">${item.Content}</p>`
@@ -54,7 +54,7 @@ function GetTodoList() {
 
         },
         error: function(err) {
-            console.error("오류 발생", err)
+            console.error("An error occurred", err)
         }
     })
 }
