@@ -1,0 +1,13 @@
+name: todolist
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  todo:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: To-do list
+        run: echo "success"
